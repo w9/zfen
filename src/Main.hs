@@ -58,8 +58,8 @@ toGraphic :: ((Int, Int), Maybe Piece) -> String
 toGraphic ((i, j), mp) =
   darkOrLight (i, j) $
           case mp of
-            (Just (Piece White t)) -> if isLightSquare (i, j) then toSolidPiece  t else toHollowPiece t
-            (Just (Piece Black t)) -> if isLightSquare (i, j) then toHollowPiece t else toSolidPiece  t
+            (Just (Piece White t)) -> if isLightSquare (i, j) then toHollowPiece t else toSolidPiece  t
+            (Just (Piece Black t)) -> if isLightSquare (i, j) then toSolidPiece  t else toHollowPiece t
             Nothing -> " "
 
 displayBoard :: String -> String
